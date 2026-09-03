@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AM Hub — Firebase Starter</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">AM</span><div><b>AM Hub</b><small>Creative Dashboard</small></div></div>
+    <div class="actions">
+      <button id="themeBtn" class="icon-btn" title="Tema">◐</button>
+      <button id="logoutBtn" class="ghost hidden">Keluar</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="authView" class="auth-layout">
+      <div class="hero">
+        <span class="badge">FIREBASE STARTER</span>
+        <h1>Kelola akun dan proyekmu dalam satu tempat.</h1>
+        <p>Template dashboard modern yang siap dihubungkan ke Firebase Authentication dan Firestore.</p>
+      </div>
+      <div class="card auth-card">
+        <div class="tabs">
+          <button class="tab active" data-mode="login">Masuk</button>
+          <button class="tab" data-mode="register">Daftar</button>
+        </div>
+        <h2 id="authTitle">Selamat datang</h2>
+        <p id="authSub">Masuk dengan email dan password.</p>
+        <button id="googleBtn" class="google">Masuk dengan Google</button>
+        <div class="divider"><span>atau</span></div>
+        <form id="authForm">
+          <label>Email<input id="email" type="email" required autocomplete="email"></label>
+          <label>Password<input id="password" type="password" required minlength="6" autocomplete="current-password"></label>
+          <label id="nameWrap" class="hidden">Nama<input id="displayName" type="text" autocomplete="name"></label>
+          <button id="submitBtn" class="primary" type="submit">Masuk</button>
+        </form>
+        <p id="status" class="status"></p>
+      </div>
+    </section>
+
+    <section id="appView" class="hidden">
+      <div class="welcome">
+        <div><span class="badge">DASHBOARD</span><h1>Halo, <span id="userName">User</span>.</h1><p>Kelola profil dan catatan proyekmu.</p></div>
+        <div class="avatar" id="avatar">U</div>
+      </div>
+      <div class="grid">
+        <article class="card stat"><span>Akun</span><strong id="accountEmail">—</strong><small>Firebase Authentication</small></article>
+        <article class="card stat"><span>Status</span><strong class="online">Aktif</strong><small>Sesi sedang berjalan</small></article>
+        <article class="card stat"><span>Catatan</span><strong id="noteCount">0</strong><small>Firestore</small></article>
+      </div>
+      <div class="content-grid">
+        <article class="card">
+          <div class="card-head"><div><h2>Catatan proyek</h2><p>Simpan data milikmu di Firestore.</p></div></div>
+          <form id="noteForm" class="note-form"><input id="noteInput" placeholder="Contoh: konsep intro..." maxlength="200" required><button class="primary" type="submit">Simpan</button></form>
+          <div id="notes" class="notes"></div>
+        </article>
+        <article class="card">
+          <h2>Profil</h2>
+          <p>Data dasar akun yang sedang masuk.</p>
+          <div class="profile"><div class="avatar large" id="profileAvatar">U</div><div><b id="profileName">User</b><span id="profileEmail">—</span></div></div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>AM Hub Starter · HTML / CSS / JavaScript + Firebase</footer>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

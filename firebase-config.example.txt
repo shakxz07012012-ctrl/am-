@@ -1,0 +1,2 @@
+Salin config Web App dari Firebase Console ke js/app.js.
+Jangan taruh service-account/private key di frontend.
